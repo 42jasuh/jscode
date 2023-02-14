@@ -1,10 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// Class 파일을 요구사항에 맞게 Main.java, Library.java, Book.java로 분리하셔야 합니다.
 class Library {
+  // 3회차 쪽집게 과외에서 잠깐 언급했듯이, ArrayList<Book> books = new ArrayList<Book>(); 형태로 쓰지 않고, List<Book> books = new ArrayList<>(); 형태로 사용합니다! 
+  // 3회차 쪽집게 과외에서 제네릭 부분 다시 확인 부탁드릴게요:)
   private ArrayList<Book> books;
+  // 주로 클래스의 필드로 List를 사용할 때는 이렇게 초기화를 많이 합니다. 
+  // private List<Book> books = new ArrayList<>();
   public Library() {
+    // ArrayList는 가변형이라서 크기를 따로 지정하지 않아도 됩니다!
     books = new ArrayList<Book>(100);
+     // 따라서 이 로직도 필요없게 됩니다.
     for (int i = 0; i < 100; i++) {
       books.add(i, null);
     }
@@ -20,6 +27,9 @@ class Library {
     }
     else {
       System.out.println("정상적으로 대여가 완료되었습니다.");
+      // setStatus()라는 메서드명은 비즈니스 로직의 의미를 명확하게 나타내지 못합니다. setStatus() 대신에 다른 메서드명을 사용해보세요. 
+      // 참고 : https://blog.naver.com/jktk1/221551306370
+      // 검색 키워드 : 'getter, setter를 사용하지 마라'
       b.setStatus(false);
     }
   }
