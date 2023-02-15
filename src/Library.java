@@ -53,7 +53,7 @@ public class Library {
     int n;
     try {
       n = Integer.parseInt(num);
-      if (n < 0) {
+      if (n <= 0) {
         Integer.parseInt("a");
       }
     } catch (NumberFormatException e) {
