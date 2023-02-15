@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Main {
   public static void main(String[] args) {
     Book b1 = new Book("클린코드(Clean Code)", true);
