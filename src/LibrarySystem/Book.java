@@ -1,10 +1,15 @@
+package LibrarySystem;
+
 public class Book {
+
   private final String title;
   private boolean available;
+
   public Book(String title, boolean available) {
     this.title = title;
     this.available = available;
   }
+
   public String getTitle() {
     return this.title;
   }

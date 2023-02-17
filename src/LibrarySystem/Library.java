@@ -1,12 +1,17 @@
+package LibrarySystem;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Library {
+
   private final List<Book> books;
+
   public Library() {
     books = new ArrayList<>();
   }
+
   public void addBook(Book book) {
     books.add(book);
   }
@@ -15,11 +20,10 @@ public class Library {
     if (index - 1 < 0) {
       System.out.println("책 번호는 1부터 시작합니다.");
     }
-    Book b = books.get(index-1);
+    Book b = books.get(index - 1);
     if (!b.isAvailable()) {
       System.out.println("대여 중인 책은 대여할 수 없습니다.");
-    }
-    else {
+    } else {
       System.out.println("정상적으로 대여가 완료되었습니다.");
       b.setStatus(false);
     }
@@ -47,7 +51,7 @@ public class Library {
     System.out.println("대여할 책의 번호를 입력하세요.");
     for (int i = 0; i < books.size(); i++) {
       Book b = books.get(i);
-      System.out.println(i+1 + ". " + b.getTitle() + " - " + this.printStatus(b));
+      System.out.println(i + 1 + ". " + b.getTitle() + " - " + this.printStatus(b));
     }
     String num = sc.nextLine();
     int n;

@@ -1,10 +1,12 @@
+package GradeSystem;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class ExamProgram {
 
   private final int[] GradeTable = new int[3];
-  private int index = -1;
+  int index = -1;
 
   private int yearInput() {
     System.out.println("몇 기인지 입력해주세요.");
