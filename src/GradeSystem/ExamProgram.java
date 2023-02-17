@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ExamProgram {
 
   private final int[] GradeTable = new int[3];
-  int index = -1;
+  private int index = -1;
 
   private int yearInput() {
     System.out.println("몇 기인지 입력해주세요.");
@@ -101,7 +101,7 @@ public class ExamProgram {
     }
   }
 
-  public void printMaxMinAverageGrade(int maxGrade, int minGrade, double average) {
+  private void printMaxMinAverageGrade(int maxGrade, int minGrade, double average) {
     System.out.printf("전체 과목 중 최고점은 %d점입니다.\n", maxGrade);
     System.out.printf("전체 과목 중 최저점은 %d점입니다.\n", minGrade);
     if (average == (int) average) {
@@ -119,7 +119,7 @@ public class ExamProgram {
     printMaxMinAverageGrade(maxGrade, minGrade, average);
   }
 
-  protected void execute() {
+  void execute() {
     int number = yearInput();
     totalGradeInput();
     double average = getAverage();
