@@ -1,0 +1,11 @@
+휴대폰 번호를 입력해주세요.
+12312341234
+Exception in thread "main" java.lang.IllegalArgumentException: 휴대폰 번호는 010으로 시작해야 합니다.
+
+휴대폰 번호를 입력해주세요.
+0101234
+Exception in thread "main" java.lang.IllegalArgumentException: 휴대폰 번호는 11글자여야 합니다.
+
+휴대폰 번호를 입력해주세요.
+01012345678
+휴대폰 번호를 정상적으로 입력하셨습니다. 입력하신 휴대폰 번호는 010-1234-5678입니다.

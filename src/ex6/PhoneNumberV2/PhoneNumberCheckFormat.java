@@ -1,4 +1,4 @@
-package ex6.InputPhoneNumber;
+package ex6.PhoneNumber2;
 
 import java.util.Scanner;
 
