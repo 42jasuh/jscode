@@ -1,4 +1,4 @@
-package GradeSystem;
+package ex5.GradeSystem;
 
 public class Main {
 

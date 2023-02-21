@@ -1,4 +1,4 @@
-package GradeSystem;
+package ex5.GradeSystem;
 
 import java.util.Arrays;
 import java.util.Scanner;

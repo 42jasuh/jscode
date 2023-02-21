@@ -1,4 +1,4 @@
-package LibrarySystem;
+package ex5.LibrarySystem;
 
 public class Book {
 
