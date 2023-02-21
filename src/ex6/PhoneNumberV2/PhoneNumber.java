@@ -7,7 +7,7 @@ public class PhoneNumber {
   private String value;
 
   public PhoneNumber() {
-    this.value = this.checkFormat();
+    this.value = this.checkPhoneNumberFormat();
   }
 
   private String getPhoneNumberFormally(String ValidPhoneNumber) {
@@ -21,7 +21,7 @@ public class PhoneNumber {
     return res;
   }
 
-  String checkFormat() {
+  String checkPhoneNumberFormat() {
     System.out.println("휴대폰 번호를 입력해주세요.");
     Scanner sc = new Scanner(System.in);
     String phoneNumber = sc.nextLine();
@@ -33,7 +33,7 @@ public class PhoneNumber {
         Integer.parseInt(String.valueOf(num));
       } catch (NumberFormatException e) {
         System.out.println("숫자만 입력해주세요.");
-        return checkFormat();
+        return checkPhoneNumberFormat();
       }
     }
 
@@ -41,13 +41,13 @@ public class PhoneNumber {
     if (phoneNumber.length() != 11) {
       System.out.println(phoneNumber.length());
       System.out.println("휴대폰 번호는 11글자여야 합니다.");
-      return checkFormat();
+      return checkPhoneNumberFormat();
     }
 
     // 입력 받은 문자열의 앞부분이 010인지 확인
     if (!phoneNumber.startsWith("010")) {
       System.out.println("휴대폰 앞자리는 010 이어야 합니다.");
-      return checkFormat();
+      return checkPhoneNumberFormat();
     }
     System.out.println(
         "휴대폰 번호를 정상적으로 입력하셨습니다. 입력하신 휴대폰 번호는 " + getPhoneNumberFormally(phoneNumber) + "입니다.");
